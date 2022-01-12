@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geometricas </title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__title">
+            <img src="./img/fa-solid_shapes.svg" alt="">
+            <h1 class="header__title-h1">
+                Geometric
+            </h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a class="link-1" href="#">Geometric Shapes</a></li>
+            </ul>
+            <ul class="nav__list">
+                <li><a class="link-2" href="#">Prices and Discounts</a></li>
+            </ul>
+            <ul class="nav__list">
+                <li><a class="link-3" href="#">average, mode and median</a></li>
+            </ul>
+            <ul class="nav__list">
+                <li><a class="link-4" href="#">salary analysis</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="calculator__sect">
+        <div>
+            <div class="card--square">
+                <h2 class="card__title">Square</h2>
+                <label for="inputCadrado" class="card__question">
+                    How to long is each side of your squares?
+                </label>
+                <input id="inputCuadrado" type="number" />
+                <div class="buttons__container">
+                    <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perimetro</button>
+                    <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+                </div>
+                <p id="Result">0 cm</p>
+            </div>
+            <div class="card--triangle">
+                <h2 class="card__title">Triangle</h2>
+                <label for="forms" class="card__question">
+                    How to long is each side of your triangle?
+                </label>
+                <div class="card__inputs">
+                    <label for="sideA">SIDE A</label>
+                    <input id="inputSideA" type="number" />
+                    <label for="sideB">SIDE B</label>
+                    <input id="inputSideB" type="number" />
+                    <label for="base">SIDE BASE</label>
+                    <input id="inputBase" type="number" />
+                    <label for="height">HEIGHT</label>
+                    <input id="inputHeight" type="number" />
+                </div>
+                <div class="buttons__container">
+                    <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perimetro</button>
+                    <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
+                </div>
+                <p id="triangleResult">0 cm</p>
+            </div>
+        </div>
+    </section>
+    <script defer async src="index.js"></script>
+</body>
+
+</html>
