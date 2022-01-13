@@ -31,7 +31,7 @@ function alturaTrianguloIsoceles(lado1,lado2,base) {
 }
 //Prices and discount 
 function priceAndDiscounts(price,discount) {
-    const descuento =  ((price * discount)/100)
+    const descuento =  ((price * discount)/100);
     const precioFinal =  price - descuento;
     alert("El precio de tu producto es: " + price);
     return alert("Tu descuento es de: " + descuento + " Y tu precio final es de: " + precioFinal);
