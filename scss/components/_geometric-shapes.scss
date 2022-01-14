@@ -1,0 +1,197 @@
+.header__logo {
+  font-size: var(--font-lg);
+  color: var(--neutral-color);
+  letter-spacing: -2.5px;
+  text-transform: uppercase;
+  font-weight: var(--font-regular);
+  padding-top: 40px;
+  margin: 20px 0;
+  &::after {
+    content: "lator";
+    font-size: var(--font-lg);
+    color: var(--seccondary-color-2);
+    letter-spacing: -2.5px;
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+  }
+}
+.header__container-title {
+  display: flex;
+  max-width: 300px;
+  justify-content: space-between;
+  align-items: center;
+
+  & img {
+    width: 72.6px;
+    height: 70px;
+  }
+  & .header__title {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-h1);
+    font-weight: var(--font-light);
+    color: var(--neutral-color);
+    text-transform: uppercase;
+    line-height: 45px;
+    margin-left: 10px;
+
+    &::after {
+      content: "SHAPES";
+      font-size: var(--font-h1);
+      font-weight: var(--font-bold);
+      color: var(--neutral-color);
+      text-transform: uppercase;
+    }
+  }
+}
+.header__nav {
+  display: flex;
+  width: 100vw;
+  height: 95px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0;
+  background-color: var(--seccondary-color);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  & ul li {
+    display: flex;
+    align-items: center;
+    padding: 16px 12px;
+    height: 55px;
+    border-radius: 10px;
+  }
+  & ul li svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  & ul li a {
+    font-size: var(--font-md);
+    font-weight: var(--font-bold);
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+}
+.nav__item--1 {
+  background-color: var(--neutral-color);
+  & svg {
+    & path {
+      fill: var(--seccondary-color-2);
+    }
+  }
+  & a {
+    color: var(--seccondary-color);
+  }
+}
+.nav__item--1 {
+  background-color: var(--neutral-color);
+
+  & a {
+    color: var(--seccondary-color);
+  }
+}
+.nav__item--2 {
+  & a {
+    color: var(--neutral-color);
+  }
+}
+.nav__item--3 {
+  & a {
+    color: var(--neutral-color);
+  }
+}
+.nav__item--4 {
+  & a {
+    color: var(--neutral-color);
+  }
+}
+//Calculator
+.calculator {
+  padding: 40px;
+}
+.card {
+  display: flex;
+  width: 280px;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &--square {
+    height: 280px;
+  }
+  &__title {
+    display: flex;
+    font-size: var(--font-md);
+    font-weight: var(--font-bold);
+    color: var(--neutral-color);
+    text-transform: uppercase;
+    
+    & svg {
+        margin-right: 10px;
+    }
+  }
+  &__question {
+    font-size: var(--font-sm);
+    color: var(--neutral-color);
+    font-weight: var(--font-light);
+    text-transform: uppercase;
+  }
+  &__input {
+    height: 40px;
+    width: 232px;
+    background-color: transparent;
+    border: 1px solid var(--neutral-color);
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.15s ease;
+
+    font-size: var(--font-xs);
+    font-weight: var(--font-light);
+    color: var(--neutral-color);
+    text-align: center;
+
+    &:focus {
+      outline: 3px solid rgba(255, 138, 0, 0.8);
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    width: 232px;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {
+      height: 40px;
+      width: 110px;
+      margin: 10px 0;
+      background-color: transparent;
+      font-size: var(--font-xs);
+      font-weight: var(--font-light);
+      color: var(--neutral-color);
+      border: 1px solid var(--seccondary-color-2);
+      border-radius: 5px;
+    }
+  }
+  &__result {
+    display: flex;
+    width: 232px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--neutral-color);
+    border-radius: 5px;
+
+    font-size: var(--font-xs);
+    font-weight: var(--font-regular);
+    color: var(--neutral-color);
+  }
+  &--circle {
+      height: 280px;
+  }
+}
