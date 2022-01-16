@@ -1,0 +1,11 @@
+.nav__item.active {
+    background-color: var(--neutral-color);
+    & svg {
+      & path {
+        fill: var(--seccondary-color-2);
+      }
+    }
+    & a {
+      color: var(--seccondary-color);
+    }
+}

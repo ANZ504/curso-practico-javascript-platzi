@@ -29,14 +29,7 @@ function alturaTrianguloIsoceles(lado1, lado2, base) {
         alert("No es isoceles");
     }
 }
-//Prices and discount 
-function priceAndDiscounts(price, discount) {
-    const descuento = ((price * discount) / 100);
-    const precioFinal = price - descuento;
-    alert("El precio de tu producto es: " + price);
-    return alert("Tu descuento es de: " + descuento + " Y tu precio final es de: " + precioFinal);
 
-}
 // Circle Code
 
 
@@ -114,7 +107,7 @@ function calcularAreaCirculo() {
 
     const area = areaCirculo(valueRatio);
 
-    resArea.innerHTML = "El area es de : " + area.toFixed(2)  + " cm";
+    resArea.innerHTML = "El area es de : " + area.toFixed(2) + " cm";
 }
 
 function calcularPerimetroCirculo() {
@@ -128,5 +121,50 @@ function calcularPerimetroCirculo() {
     const perimetro = diametro * Math.PI;
 
     resPerimeter.innerHTML = "El perimetro es de : " + perimetro.toFixed(2) + " cm";
+    
+
+
+}
+//Price and DIscount Calculate 
+//Prices and discount 
+function priceAndDiscounts(price, discount) {
+    const descuento = ((price * discount) / 100);
+    const precioFinal = price - descuento;
+
+
+    return precioFinal;
+
+}
+
+function calculateCoupon() {
+    const cupons = [5, 25, 50];
+    const cupon = document.getElementById("coupon");
+    const valueCupon = parseInt(cupon.value);
+    if (valueCupon === cupons[0]) {
+        return cupons[0];
+    } else if (valueCupon === cupons[1]) {
+        return cupons[1];
+    } else if (valueCupon === cupons[2]) {
+        return cupons[2];
+    } else {
+        return 0
+    }
+}
+
+function calculatePriceAndDiscount() {
+
+    const inputPrice = document.getElementById("inputPrice");
+    const inputPercent = document.getElementById("inputPercent");
+    const resPrice = document.getElementById("priceFinalResult");
+
+    const valuePrice = inputPrice.value;
+    const valuePercent = inputPercent.value;
+
+    const price = priceAndDiscounts(valuePrice, valuePercent);
+    const coupon = (price * calculateCoupon()) / 100;
+
+    const finalPrice = price - coupon;
+    resPrice.innerHTML = "Total: $" + finalPrice;
+    
 
 }

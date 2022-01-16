@@ -459,6 +459,16 @@ body {
   padding: 0 40px;
 }
 
+.nav__item.active {
+  background-color: var(--neutral-color);
+}
+.nav__item.active svg path {
+  fill: var(--seccondary-color-2);
+}
+.nav__item.active a {
+  color: var(--seccondary-color);
+}
+
 .header__logo {
   font-size: var(--font-lg);
   color: var(--neutral-color);
@@ -537,32 +547,13 @@ body {
   text-transform: uppercase;
 }
 
-.nav__item--1 {
-  background-color: var(--neutral-color);
+.nav__item {
+  background-color: transparent;
 }
-.nav__item--1 svg path {
-  fill: var(--seccondary-color-2);
+.nav__item svg path {
+  fill: var(--neutral-color);
 }
-.nav__item--1 a {
-  color: var(--seccondary-color);
-}
-
-.nav__item--1 {
-  background-color: var(--neutral-color);
-}
-.nav__item--1 a {
-  color: var(--seccondary-color);
-}
-
-.nav__item--2 a {
-  color: var(--neutral-color);
-}
-
-.nav__item--3 a {
-  color: var(--neutral-color);
-}
-
-.nav__item--4 a {
+.nav__item a {
   color: var(--neutral-color);
 }
 
@@ -574,12 +565,16 @@ body {
   display: flex;
   width: 280px;
   flex-direction: column;
+  justify-content: center;
   padding: 24px;
+  margin: 0 auto;
   border-radius: 15px;
+  background-color: var(--seccondary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .card--square {
   height: 280px;
+  margin-bottom: 20px;
 }
 .card__title {
   display: flex;
@@ -646,6 +641,93 @@ body {
 }
 .card--circle {
   height: 280px;
+  margin-bottom: 20px;
+}
+
+.pricesAndDiscount {
+  margin-top: 20px;
+}
+
+.card--prices {
+  display: flex;
+  width: 280px;
+  height: 435px;
+  flex-direction: column;
+  padding: 24px;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: var(--seccondary-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.card--prices h2 {
+  display: flex;
+  font-size: var(--font-md);
+  font-weight: var(--font-bold);
+  color: var(--neutral-color);
+  text-transform: uppercase;
+}
+.card--prices h2 svg {
+  margin-right: 10px;
+}
+.card--prices .card__question {
+  font-size: var(--font-sm);
+  color: var(--neutral-color);
+  font-weight: var(--font-light);
+  text-transform: uppercase;
+}
+.card--prices input {
+  height: 40px;
+  width: 232px;
+  background-color: transparent;
+  border: 1px solid var(--neutral-color);
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.15s ease;
+  font-size: var(--font-xs);
+  font-weight: var(--font-light);
+  color: var(--neutral-color);
+  text-align: center;
+}
+.card--prices input:focus {
+  outline: 3px solid rgba(255, 138, 0, 0.8);
+}
+.card--prices select {
+  height: 40px;
+  width: 232px;
+  background-color: var(--seccondary-color-2);
+  border: 0;
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.15s ease;
+  font-size: var(--font-xs);
+  font-weight: var(--font-light);
+  color: var(--neutral-color);
+}
+.card--prices select:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+}
+.card--prices select option {
+  background-color: var(--seccondary-color-2);
+  font-size: var(--font-xs);
+  font-weight: var(--font-light);
+  color: var(--neutral-color);
+}
+.card--prices select option li:hover {
+  background-color: var(--neutral-color);
+}
+.card--prices p {
+  display: flex;
+  width: 232px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--neutral-color);
+  border-radius: 5px;
+  font-size: var(--font-xs);
+  font-weight: var(--font-regular);
+  color: var(--neutral-color);
 }
 
 /*# sourceMappingURL=style.css.map */
